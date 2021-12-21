@@ -7,6 +7,8 @@
     <meta name="theme-color" content="#000000">
     <meta name="description" content="GoHustle: the smart way to Keep track your job applications">
     <link rel="apple-touch-icon" href="propulsion_only_rocket.ico">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Khand:wght@400;500;600&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet">
     <link rel="manifest" href="/manifest.json">
@@ -110,7 +112,8 @@
                 <div>Jobseeker</div>
               </div>
               <div class="wrappers__CurrentlyViewingWrapper-dj05gd-26 loOPas"></div>
-              <div class="wrappers__AddJobButtonWrapper-dj05gd-27 kkRnIO"><button class="buttons__BaseButton-sc-1i16139-0 dBkrWh" data-target="#myModal">+ New Job</button></div>
+              <div class="wrappers__AddJobButtonWrapper-dj05gd-27 kkRnIO">
+                <button class="buttons__BaseButton-sc-1i16139-0 dBkrWh" data-toggle="modal" data-target="#myModal">+ New Job</button></div>
             </div>
             <div class="containers__ColumnsContainer-it2e38-8 YcEft">
               <div class="job__JobColumnContainer-xv8027-9 bMkcme">
@@ -123,26 +126,7 @@
                   </div>
                 </div>
               </div>
-              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                      <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                    </div>
-                    <div class="modal-body">
-                      <form id="cities-form" action="#" method="post">
-                          <input id="city1" name="city1" type="text" value="" autofocus> <br>
-                     </form>
-                    </div>
-                    <div class="modal-footer">
-                       <span class="error"></span>
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button id="submit" type="button" class="btn btn-primary">Submit Cities</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
               <div class="job__JobColumnContainer-xv8027-9 bMkcme">
                 <div class="job__JobColumnHeaderWrapper-xv8027-10 bAlyLc" >Applied</div>
                 <div data-rbd-droppable-id="WH" data-rbd-droppable-context-id="0" class="job__JobDroppableListWrapper-xv8027-11 cPAMvi">
@@ -177,6 +161,28 @@
         </div>
       </div>
     </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <form id="cities-form" action="#" method="post">
+                <input id="city1" name="city1" type="text" value="" autofocus> <br>
+           </form>
+          </div>
+          <div class="modal-footer">
+             <span class="error"></span>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button id="submit" type="button" class="btn btn-primary">Submit Cities</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     
     <script>
       ! function(e) {
@@ -270,6 +276,7 @@
     <div id="rbd-lift-instruction-0" style="display: none;">Draggable item. Ensure your screen reader is not in browse mode and then press space bar to lift.</div>
     
   <script src="js/dashboard.js"></script>
+  
   <div class="container-fluid h-100 section">
       <div class="row h-100 d-flex">
           <div class="col-sm-12 align-self-center text-center text-50">
